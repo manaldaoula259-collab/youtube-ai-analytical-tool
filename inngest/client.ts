@@ -1,4 +1,8 @@
 import { Inngest } from "inngest";
 
-// Create a client to send and receive events
-export const inngest = new Inngest({ id: "Tubepulse" });
+// استخدم Event Key من متغير البيئة
+export const inngest = new Inngest({
+  id: "Tubepulse",
+  eventKey: process.env.INNGEST_EVENT_KEY, // <- هذا السطر مهم
+});
+
